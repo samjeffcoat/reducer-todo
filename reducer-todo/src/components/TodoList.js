@@ -1,8 +1,10 @@
 import React, { useReducer } from 'react';
-import { reducer, todo } from '../reducers/Reducer';
+import { reducer, initialState } from '../reducers/Reducer';
 import Todo from './Todo';
 
 const TodoList = props => {
+    const [state, dispatch] = useReducer(reducer, initialState);
+
     return(
         <div className ='todo-list' >
             {props.todo.map(todo => (

@@ -1,16 +1,13 @@
-export const todo = {
-    item: 'Learn about reducers',
+export const initialState = {
+    addTodo: [
+    {item: 'Learn about reducers',
     completed: false,
-    id: 3892987589
-}
+    id: 3892987589}
+]}
 
 
-export function reducer(state, action){
+export const reducer =(state, action) =>{
     switch(action.type) {
-        case 'TESTING_SETUP ':
-    return {
-        ...state, 
-    }
     default:
         return state 
 }}
