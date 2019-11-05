@@ -20,6 +20,15 @@ export const todo = [
 
 export const reducer =(state, action) =>{
     switch(action.type) {
+        case "ADD_TODO":
+            return [
+                ...state,
+                {
+                    item: action.payload,
+                    id:Date.now(),
+                    completed: false
+                }
+            ]
     default:
         return state 
 }}
