@@ -15,6 +15,12 @@ export const  TodoForm = ({dispatch}) => {
         });
         setItem("")
     }
+    const clearCompleted =event => {
+        event.preventDefault();
+        dispatch({
+            type: "CLEAR_COMPLETED"
+        })
+    }
         return(
             <form onSubmit= {submitFom}>
                 <label htmlFor= "todo">New Todo</label>
@@ -26,6 +32,7 @@ export const  TodoForm = ({dispatch}) => {
                 onChange = {handleChanges}
                 />
                 <button>Add Todo!</button>
+                <button className="clear-btn" onClick={clearCompleted}>Clear Todo's </button>
             </form>
         )
     }

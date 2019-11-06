@@ -10,9 +10,8 @@ const TodoList = props => {
         <div className ='todo-list' >
             <TodoForm dispatch ={dispatch}/>
             {state.map(todo => (
-                <Todo key = {todo.id} todo= {todo} toggleCompleted = {props.toggleCompleted}dispatch = {dispatch} />
+                <Todo key = {todo.id} todo= {todo} dispatch = {dispatch} />
             ))}
-            <button className = "clear-btn" onClick= {props.clearCompleted}>Clear Todo's </button>
 
         </div>
     )
